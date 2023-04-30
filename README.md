@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/100117126/235352632-e3e22d9e-2c8b-43d3-a297-dd8fbd90fc56.png" />
+    <a href="https://connect.novu.co" target="_blank"><img src="https://user-images.githubusercontent.com/100117126/235352632-e3e22d9e-2c8b-43d3-a297-dd8fbd90fc56.png" /></a>
 </div>
 
 <h1 align="center">The open-source notification infrastructure for developers</h1>
