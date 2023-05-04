@@ -1,13 +1,13 @@
-import { CVAExampleComponent } from "@/components/example/CVA";
+import { CategroyCheckbox } from "@/components/CategoryCheckbox";
+import { FilterBar } from "@/components/FilterBar";
+import { Drop, FirstAid, PawPrint, Tree } from "phosphor-react";
 
 export default function Home() {
   return (
     <main
-      className='flex min-h-screen flex-col items-center justify-between p-24 bg-zinc-500'
+      className='flex min-h-screen flex-col items-center justify-between bg-gray-100'
     >
-      <p>Hello world</p>
-      <CVAExampleComponent/>
-      <CVAExampleComponent intent="secondary"/>
+      <FilterBar/>
     </main>
   )
 }
