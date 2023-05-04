@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "novu-product-recommendation"
+version = "0.1.0"
+description = "A notification system that provides personalized product recommendations based on a user's browsing history and purchase behavior."
+authors = ["spaceofmiah <agbonzeosazuwa@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "novu_product_recommendation"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
