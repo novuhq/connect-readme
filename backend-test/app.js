@@ -2,7 +2,6 @@ const express = require("express");
 const { sequelize } = require("./sequel/models");
 const { User } = require("./sequel/models");
 
-
 const app = express();
 const PORT = 3000;
 
