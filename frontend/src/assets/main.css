@@ -20,7 +20,7 @@ nav > div {
 
 #brand {
     font-weight: 800;
-    color:rgb(0, 180, 171)
+    color:#ff006a;
 }
 
 .wrapper {
@@ -45,17 +45,25 @@ nav > div {
     cursor: pointer;
     font-weight: 400;
     border-radius: 8px;
-    background-color: rgb(0, 180, 171);
+    background-color: #ff006a;
 }
 
 .wrapper a:hover {
-    background-color: rgba(0, 180, 171, 0.801);
+    background-color: #ff006ad3;
     transition: 0.4s ease-in-out;
 }
 
 .cta {
-    color: #ffffff;
+    color: #ff006a;
     padding: 0.8px 13px;
     border-radius: 4px;
-    background-color: #e94a36;
+    font-weight: 700;
+    background-color: black;
+}
+
+.section-title {
+    color: #ff006a;
+    font-size: 28px;
+    margin: 28px 0px;
+    font-weight: bolder;
 }
