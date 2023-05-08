@@ -23,7 +23,7 @@ nav > div {
     color:#ff006a;
 }
 
-.wrapper {
+header div {
     height: 50vh;
     color: white;
     display: flex;
@@ -36,11 +36,11 @@ nav > div {
     background: url('./header.jpg') rgba(37, 29, 29, 0.712) no-repeat center center;
 }
 
-.wrapper h1 {
-    font-weight: 600;
+header div h1 {
+    font-size: 40px;
 }
 
-.wrapper a {
+header div a {
     padding: 8px 14px;
     cursor: pointer;
     font-weight: 400;
