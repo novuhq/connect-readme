@@ -23,18 +23,18 @@ import CategoryView from './components/CategoryView.vue';
   </header>
 
   <main>
-    <div>
+    <div style="margin-top: 50px">
       <h3 class="section-title" style='text-align:center'>Most Recommended</h3>
       <section class="section-list">
         <div class="section-card">
-          <h1>Only the Best Product Based on Relevance to Category</h1>
+          <h1>Interesting Products Based On Recommendation</h1>
           <a style="cursor: pointer">view more</a>
         </div>
         <CardList />
       </section>
     </div>
 
-    <div>
+    <div style="margin-top: 180px">
       <h3 class="section-title" style='text-align:center'>Recommend By Category</h3>
       <section class="section-list">
         <div class="category-list"> 
@@ -69,7 +69,7 @@ import CategoryView from './components/CategoryView.vue';
  }
 
  .section-card h1 {
-  font-size: 42px;
+  font-size: 32px;
  }
 
  .section-card a {
@@ -90,7 +90,7 @@ import CategoryView from './components/CategoryView.vue';
   font-size: 32px;
  }
 
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 830px) {
   .section-list {
     flex-wrap: wrap;
   }
