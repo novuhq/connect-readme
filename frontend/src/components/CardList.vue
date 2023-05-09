@@ -1,13 +1,13 @@
 <script setup>
-import ItemView from './ItemView.vue';
+import Item from './Item.vue';
 </script>
 
 <template>
 	<section class="card-list">
-		<ItemView name="Hello Dough" amount=98 />
-		<ItemView name="Luda Base" amount=98 />
-		<ItemView name="Hello Dough" amount=98 />
-		<ItemView name="Luda Base" amount=98 />
+		<Item name="Hello Dough" amount=98 />
+		<Item name="Luda Base" amount=98 />
+		<Item name="Hello Dough" amount=98 />
+		<Item name="Luda Base" amount=98 />
 	</section>
 </template>
 
