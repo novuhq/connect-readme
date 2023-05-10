@@ -9,7 +9,7 @@ import { shuffle } from '../../utils';
   <header>
     <div>
       <h1>NovuRecommend - The New Way to Shop</h1>
-      <a>See what's available</a>
+      <router-link :to="{name: 'explore'}">See what's available</router-link>
     </div>
   </header>
 
@@ -23,7 +23,7 @@ import { shuffle } from '../../utils';
       <section class="section-list">
         <div class="section-card">
           <h1>Interesting Products Based On Recommendation</h1>
-          <a style="cursor: pointer">view more</a>
+          <a style="cursor: pointer">coming soon</a>
         </div>
         <CardList :data="shuffle(data).slice(0, 4)" />
       </section>
@@ -40,7 +40,7 @@ import { shuffle } from '../../utils';
         </div>
         <div class="section-card"> 
           <h1>Only the Best Product Based on Relevance to Category</h1>
-          <a style="cursor: pointer">view more</a>
+          <a style="cursor: pointer">coming soon</a>
         </div>
       </section>
     </div>
@@ -48,6 +48,11 @@ import { shuffle } from '../../utils';
 </template>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: black;
+}
+
  header div {
   padding: 0 20px;
  }
