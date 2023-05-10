@@ -28,7 +28,7 @@ const props = defineProps(['name'])
 @media screen and (max-width: 620px) {
 	.item-card span {
 		width: 130px;
-		height: 150px;
+		height: 130px;
 	}
 }
 </style>
