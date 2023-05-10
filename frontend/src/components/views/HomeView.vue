@@ -29,7 +29,7 @@ import data from '../../data.json';
       </section>
     </div>
 
-    <div style="margin-top: 180px">
+    <div style="margin-top: 80px">
       <h3 class="section-title" style='text-align:center'>Recommend By Category</h3>
       <section class="section-list">
         <div class="category-list"> 
