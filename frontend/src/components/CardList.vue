@@ -21,7 +21,7 @@ function shuffle(array) {
   return array;
 }
 
-const summarydata = shuffle(props.data).splice(0, 4)
+const summarydata = shuffle(props.data).slice(0, 4)
 </script>
 
 <template>
