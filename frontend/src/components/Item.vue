@@ -22,10 +22,10 @@ a {
 }
 
 .item-card span {
-	width: 180px;
+	width: 160px;
 	height: 210px;
 	display: block;
-	max-width: 250px;
+	max-width: 180px;
 	margin-bottom: 10px;
 	background-color: gainsboro;
 }
