@@ -12,7 +12,7 @@ import Category from '../Category.vue';
   </header>
 
   <div id="testimonial-summary">
-    <h5><span>948+</span> has testified to be satisfied with recommended products.</h5>
+    <h5><span>948+</span> users has testified to be satisfied with recommended products.</h5>
   </div>
 
   <main>
