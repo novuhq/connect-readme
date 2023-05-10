@@ -38,7 +38,7 @@ export default function Home() {
           </nav>
           <button
             onClick={toggleNav}
-            className={styles.mobileNavigation}
+            className={styles.mobileNavigationBtn}
             aria-label="menu"
             aria-expanded={isVisible}
           ></button>
