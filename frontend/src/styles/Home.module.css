@@ -6,95 +6,116 @@
   color: #fff;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em;
-}
-
-.white {
-  color: rgb(245, 245, 245);
-  font-size: 1em;
+.main {
+  padding-inline: 1em;
 }
 
 .green {
   color: rgb(28, 150, 109);
 }
 
-.mobileNavigationBtn {
-  border: none;
-  background-color: transparent;
-  width: 16px;
-  height: 16px;
-  background-image: url('../assets/icon-hamburger.svg');
-
+.paleGreen {
+  color: rgb(178, 242, 221);
 }
 
-.mobileNavigationBtn[aria-expanded=true] {
-  background-image: url('../assets/icon-close.svg');
+.cream {
+  color: rgb(245, 253, 8);
 }
 
-.nav {
-  display: none;
-}
-
-.nav[data-visible=true] {
+.block {
   display: block;
-  background-color: #fff;
-  position: fixed;
-  top: 3em;
-  left: 1em;
-  right: 1em;
-  padding: 1em;
-  border-radius: 8px;
-  color: #000;
 }
 
-.navLinks {
+.colOne {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.image {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+}
+
+.catchPhrase {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0.5em;
+  color: #d9d6d6;
+}
+
+.imageContainer {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  min-height: 250px;
+}
+
+.start {
+  background-color: rgb(15, 115, 5);
+  color: #fff;
+  padding: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: none;
+}
+
+.colTwo {
+  padding-bottom: 2em;
+}
+
+.icon {
+  margin-bottom: 1em;
+}
+
+.card {
   text-align: center;
   padding: 1em;
 }
 
-.btn {
-  border: none;
-}
-
-.login {
-  color: rgb(28, 150, 109);
-  background-color: rgb(248, 248, 248);
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-
-.signIn {
-  background-color: rgb(28, 150, 109);
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  cursor: pointer;
+.cardText {
+  color: #d9d6d6;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 @media (min-width:40rem) {
-  .mobileNavigationBtn {
-    display: none;
+  .colOne {
+    flex-direction: row;
   }
 
-  .nav[data-visible=true] {
-    display: block;
-    background-color: transparent;
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    padding: 0;
+  .bold {
+    font-size: 2em;
+  }
+
+  .colTwo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .cardHeading {
+    font-weight: 600;
+    margin-bottom: 1em;
+    font-size: 1.2em;
     color: #fff;
   }
 
-  .navLinks {
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
+  .card {
+    text-align: left;
+    border: 1px solid green;
+    border-radius: 8px;
+  }
+
+  .main {
+    padding-inline: 2em;
   }
 }

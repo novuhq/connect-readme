@@ -1,0 +1,105 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.white {
+    color: rgb(245, 245, 245);
+    font-size: 2em;
+}
+
+.green {
+    color: rgb(178, 242, 221);
+}
+
+.mobileNavigationBtn {
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/icon-hamburger.svg');
+}
+
+.mobileNavigationBtn[aria-expanded=true] {
+    background-image: url('../assets/icon-close.svg');
+}
+
+.nav {
+    display: none;
+}
+
+.nav[data-visible=true] {
+    display: block;
+    background-color: #fff;
+    position: fixed;
+    top: 4em;
+    left: 1em;
+    right: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    color: #000;
+    z-index: 1;
+}
+
+.navLinks {
+    text-align: center;
+    padding: 1em;
+}
+
+.btn {
+    border: none;
+}
+
+.login {
+    color: rgb(28, 150, 109);
+    background-color: rgb(248, 248, 248);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.signIn {
+    background-color: rgb(28, 150, 109);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+@media (min-width:40rem) {
+    .header{
+        padding-inline: 2em;
+    }
+    .mobileNavigationBtn {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav[data-visible=true] {
+        display: block;
+        background-color: transparent;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        padding: 0;
+        color: #fff;
+    }
+
+    .navLinks {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+    }
+}
