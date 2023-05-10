@@ -13,3 +13,7 @@ body{
   min-height: 100vh;
   font-size: 16px;
 }
+
+li{
+  list-style: none;
+}
