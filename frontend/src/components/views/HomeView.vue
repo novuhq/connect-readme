@@ -1,8 +1,8 @@
 <script setup>
 import CardList from '../CardList.vue';
 import Category from '../Category.vue';
-import { onBeforeMount } from 'vue';
 import data from '../../data.json';
+import { shuffle } from '../../utils';
 </script>
 
 <template>
@@ -25,7 +25,7 @@ import data from '../../data.json';
           <h1>Interesting Products Based On Recommendation</h1>
           <a style="cursor: pointer">view more</a>
         </div>
-        <CardList :data=data />
+        <CardList :data="shuffle(data).slice(0, 4)" />
       </section>
     </div>
 
