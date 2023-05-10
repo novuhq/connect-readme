@@ -1,11 +1,27 @@
 import Head from "next/head";
-import { useState } from "react";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Navbar from "@/components/Navbar";
+import { useEffect, useState } from "react";
+
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-  const toggleNav = () => {
-    setIsVisible(!isVisible);
+  const [product, setProduct] = useState("Crypto");
+  const [changeProductColor, setChangeProductColor] = useState(false);
+  const changeProduct = () => {
+    if (product === "Crypto") {
+      setProduct("Stock");
+    } else {
+      setProduct("Crypto");
+    }
+    setChangeProductColor(!changeProductColor);
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeProduct();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [changeProductColor, product]);
+
   return (
     <>
       <Head>
@@ -15,35 +31,90 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.landingContainer}>
-        <header className={styles.header}>
-          <h1 className={styles.white}>
-            Stock<span className={styles.green}>alert</span>
-          </h1>
-          <nav className={styles.nav} data-visible={isVisible}>
-            <ul className={styles.navLinks}>
-              <li>View stocks</li>
-              <li>
-                {" "}
-                <button className={`${styles.btn} ${styles.login}`}>
-                  Login
-                </button>
-              </li>
-              <li>
-                {" "}
-                <button className={`${styles.btn} ${styles.signIn}`}>
-                  Sign in
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <button
-            onClick={toggleNav}
-            className={styles.mobileNavigationBtn}
-            aria-label="menu"
-            aria-expanded={isVisible}
-          ></button>
-        </header>
-        <main className={`${styles.main}`}></main>
+        <Navbar />
+        <main className={`${styles.main}`}>
+          <section className={`${styles.colOne}`}>
+            <div>
+              <p className={styles.bold}>
+                Your One stop
+                <span> Shop for </span>
+                <span className={styles.block}>
+                  {" "}
+                  <span
+                    className={changeProductColor ? styles.green : styles.cream}
+                  >
+                    {product}
+                  </span>{" "}
+                  Notifications
+                </span>
+              </p>
+              <p className={styles.catchPhrase}>
+                Never Miss a Profitable Move: Unlock Your Potential with
+                Real-Time Stock and Crypto Alerts!
+              </p>
+              <button className={styles.start}>Get started</button>
+            </div>
+            <Image
+              src="/Mail-bro.svg"
+              width={300}
+              height={300}
+              alt="notification bell"
+              className={styles.image}
+            />
+          </section>
+          <section className={`${styles.colTwo}`}>
+            <div className={styles.card}>
+              <Image
+                src="/alert.png"
+                width={40}
+                height={40}
+                alt="alert"
+                className={styles.icon}
+              />
+              <p className={styles.cardHeading}>Real-Time Alerts</p>
+              <p className={styles.cardText}>
+                <span className={styles.white}>
+                  Stock<span className={styles.paleGreen}>alert</span>
+                </span>{" "}
+                delivers instant notifications on stock and cryptocurrency
+                movements, ensuring you stay informed and can capitalize on
+                time-sensitive opportunities.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <Image
+                src="/setting.svg"
+                width={50}
+                height={50}
+                alt="setting"
+                className={styles.icon}
+              />
+              <p className={styles.cardHeading}>Alert Settings</p>
+              <p className={styles.cardText}>
+                We allow our users Tailor their alerts to match their investment
+                strategy. Set personalized criteria such as price thresholds or
+                volume changes to receive alerts that align with your specific
+                interests.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <Image
+                src="/broad.png"
+                width={40}
+                height={40}
+                alt="chinese hand fan"
+                className={styles.icon}
+              />
+              <p className={styles.cardHeading}>Market Coverage</p>
+              <p className={styles.cardText}>
+                Access a wide range of stocks and cryptocurrencies, gaining a
+                comprehensive view of the financial landscape. Stay updated on
+                individual stocks, popular cryptocurrencies and specific sectors
+                to make informed investment decisions
+              </p>
+            </div>
+          </section>
+        </main>
       </div>
     </>
   );
