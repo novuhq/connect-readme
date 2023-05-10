@@ -12,7 +12,7 @@ export default function Home() {
       <header className={styles.header}>
         <h1>Stock<span className={styles.green}>alert</span></h1>
         <nav>
-          <ul>
+          <ul className={styles.navLinks}>
             <li>View stocks</li>
             <li>
               {" "}
