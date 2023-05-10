@@ -2,31 +2,11 @@
 import Item from './Item.vue';
 
 const props = defineProps({data: Array})
-
-function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex != 0) {
-
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}
-
-const summarydata = shuffle(props.data).slice(0, 4)
 </script>
 
 <template>
 	<section class="card-list">
-		<template v-for="item in summarydata">
+		<template v-for="item in props.data">
 			<Item :name=item.name :amount=item.price :id=item.id />
 		</template>
 	</section>
