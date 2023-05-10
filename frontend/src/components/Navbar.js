@@ -18,12 +18,12 @@ function Navbar() {
 
       <nav className={styles.nav} data-visible={isVisible}>
         <ul className={styles.navLinks}>
-          <li>Market</li>
-          <li>
+          <li className={styles.navLink}>Market</li>
+          <li className={styles.navLink}>
             {" "}
             <button className={`${styles.btn} ${styles.login}`}>Login</button>
           </li>
-          <li>
+          <li className={styles.navLink}>
             {" "}
             <button className={`${styles.btn} ${styles.signIn}`}>
               Sign in
