@@ -4,17 +4,6 @@ import Category from '../Category.vue';
 </script>
 
 <template>
-  <nav>
-    <h3>
-      <a id="brand">novuShop</a>
-    </h3>
-
-    <div>
-      <a>browse</a>
-      <a class="cta">Login</a>
-    </div>
-  </nav>
-
   <header>
     <div>
       <h1>NovuRecommend - The New Way to Shop</h1>
