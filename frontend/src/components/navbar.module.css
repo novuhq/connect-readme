@@ -38,7 +38,7 @@
 
 .nav[data-visible=true] {
     display: block;
-    background-color: #fff;
+    background-color: #fff !important;
     position: fixed;
     top: 4em;
     left: 1em;
