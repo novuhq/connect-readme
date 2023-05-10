@@ -1,6 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleNav = () => {
+    setIsVisible(!isVisible);
+  };
   return (
     <>
       <Head>
@@ -9,23 +13,37 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>
-        <h1>Stock<span className={styles.green}>alert</span></h1>
-        <nav>
-          <ul className={styles.navLinks}>
-            <li>View stocks</li>
-            <li>
-              {" "}
-              <button>Sign in</button>
-            </li>
-            <li>
-              {" "}
-              <button>Login</button>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main className={`${styles.main}`}></main>
+      <div className={styles.landingContainer}>
+        <header className={styles.header}>
+          <h1 className={styles.white}>
+            Stock<span className={styles.green}>alert</span>
+          </h1>
+          <nav className={styles.nav} data-visible={isVisible}>
+            <ul className={styles.navLinks}>
+              <li>View stocks</li>
+              <li>
+                {" "}
+                <button className={`${styles.btn} ${styles.login}`}>
+                  Login
+                </button>
+              </li>
+              <li>
+                {" "}
+                <button className={`${styles.btn} ${styles.signIn}`}>
+                  Sign in
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <button
+            onClick={toggleNav}
+            className={styles.mobileNavigation}
+            aria-label="menu"
+            aria-expanded={isVisible}
+          ></button>
+        </header>
+        <main className={`${styles.main}`}></main>
+      </div>
     </>
   );
 }
