@@ -1,6 +1,11 @@
 @import './base.css';
 
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     padding: 18px 0;
