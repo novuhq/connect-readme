@@ -1,21 +1,25 @@
 <script setup>
-import { watch, ref, onBeforeMount} from 'vue';
+import { watch, onBeforeMount} from 'vue';
 import { useRoute } from 'vue-router';
 import data from '../../data.json'
 
+
+const get_data = (id) => data.find(item => item.id == id)
 const route = useRoute()
-let product = ref(0);
+let product;
 
-const get_data = (id) => data.find(item => item.id === parseInt(id))
-
-watch(() => route.params.id, (newId) => { product = get_data(parseInt(newId)) })
-onBeforeMount(() => {product = get_data(route.params.id)})
-
+onBeforeMount(() => {
+	watch(
+		() => route.params.id, 
+		() => { product = get_data(parseInt(route.params.id)) },
+		{immediate: true}
+	)
+})
 
 </script>
 
 <template>
-	<section>
+	<section v-if="product">
 		<span>
 		</span>
 
@@ -31,6 +35,10 @@ onBeforeMount(() => {product = get_data(route.params.id)})
 			</small>
 		</div>
 	</section>
+	<span v-else style="display: flex; justify-content: center; align-items: center; height: 90vh; color: #ff088c; flex-direction: column;">
+		<h2>loading...</h2>
+		<small style="color: black">refresh if taking too long</small>
+	</span>
 </template>
 
 
