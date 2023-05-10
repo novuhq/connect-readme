@@ -7,3 +7,8 @@
 .green{
   color: rgb(28, 150, 109);
 }
+.navLinks{
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
