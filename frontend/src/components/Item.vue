@@ -1,20 +1,24 @@
 <script setup>
-const props = defineProps(['name', 'amount'])
+	const props = defineProps(['name', 'amount', 'id'])
 </script>
 
 <template>
-	<a class="item-card">
+	<span class="item-card">
 		<span></span>
-		<h3>{{props.name}}</h3>
+		<h3><router-link :to="{name: 'productdetail', params:{id: props.id}}" >{{props.name}}</router-link></h3>
 		<small>$ {{ props.amount }}</small>
-		<h6>buy</h6>
-	</a>
+	</span>
 </template>
 
 
 <style scoped>
+a {
+	text-decoration: none;
+	color: #113024;
+}
+
 .item-card {
-	max-width: 300px;
+	max-width: 140px;
 }
 
 .item-card span {

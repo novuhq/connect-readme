@@ -1,6 +1,8 @@
 <script setup>
 import CardList from '../CardList.vue';
 import Category from '../Category.vue';
+import { onBeforeMount } from 'vue';
+import data from '../../data.json';
 </script>
 
 <template>
@@ -23,7 +25,7 @@ import Category from '../Category.vue';
           <h1>Interesting Products Based On Recommendation</h1>
           <a style="cursor: pointer">view more</a>
         </div>
-        <CardList />
+        <CardList :data=data />
       </section>
     </div>
 
