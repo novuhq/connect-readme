@@ -11,9 +11,13 @@ import Category from '../Category.vue';
     </div>
   </header>
 
+  <div id="testimonial-summary">
+    <h5><span>948+</span> has testified to be satisfied with recommended products.</h5>
+  </div>
+
   <main>
     <div style="margin-top: 50px">
-      <h3 class="section-title" style='text-align:center'>Most Recommended</h3>
+      <h3 class="section-title" style='text-align:center'>Recently Recommended</h3>
       <section class="section-list">
         <div class="section-card">
           <h1>Interesting Products Based On Recommendation</h1>
@@ -44,6 +48,18 @@ import Category from '../Category.vue';
 <style scoped>
  header div {
   padding: 0 20px;
+ }
+
+ #testimonial-summary {
+  background-color: #fb3;
+  color: black;
+  text-align: center;
+  padding: 4px 8px;
+ }
+
+ #testimonial-summary span {
+  font-weight:bolder;
+  color: #ff006a;
  }
 
 
@@ -82,6 +98,14 @@ import Category from '../Category.vue';
  @media screen and (max-width: 830px) {
   .section-list {
     flex-wrap: wrap;
+  }
+ }
+
+ @media screen and (max-width: 820px) {
+  header > div > h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 12px;
   }
  }
 </style>
