@@ -5,7 +5,7 @@
     </h3>
 
     <div>
-      <a>browse</a>
+      <router-link :to="{name: 'explore'}">browse</router-link>
       <a class="cta">Login</a>
     </div>
   </nav>
