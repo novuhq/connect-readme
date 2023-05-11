@@ -1,0 +1,128 @@
+.marketContainer {
+    background-color: #072364;
+    background-image: url('../assets/bgpattern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.selectMarketContainer {
+    position: relative;
+    margin-left: 4rem;
+    margin-bottom: 8rem;
+}
+
+.selectMarketDropDown {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-left: 1rem;
+    display: flex;
+    width: fit-content;
+}
+
+.selectMarketDropDown p {
+    margin-right: 1.6rem;
+}
+
+.marketOptionsOpen {
+    display: none;
+}
+
+.selectMarketContainer > div:last-of-type {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    margin-left: 1rem;
+    background-color: white;
+}
+
+
+.selectMarketContainer > div:last-of-type li {
+    padding-inline: 1.6rem;
+    padding-block: 0.5rem;
+}
+
+.selectMarketContainer > div:last-of-type li button {
+    font-size: 1.2rem;
+}
+
+.itemListContainer {
+    margin-bottom: 2rem;
+}
+
+.itemListContainer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    padding-inline: 1rem;
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.itemListContainer ul li {
+    flex-basis: 32%;
+}
+
+.itemListContainer ul li > div {
+    border-radius: 10px;
+    background-color: rgb(239, 239, 239);
+    /* width: 300px; */
+    height: 200px;
+}
+
+.itemListContainer ul li > div > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding-top:1rem;
+    margin-inline: 1.5rem;
+    align-items: center;
+}
+
+.itemListContainer ul li > div > div:first-child > div:first-child {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #6DF84A;
+    background-color: #8E3737;
+}
+
+.itemListContainer ul li > div > div:first-child > div:last-child {
+    text-align: end;
+}
+
+.itemListContainer ul li > div > h2 {
+    margin-top: 2rem;
+    text-align: end;
+    margin-inline: 1.5rem;
+    font-size: 2rem;
+
+}
+
+@media screen and (max-width: 768px) {
+    .selectMarketContainer {
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .selectMarketContainer > div:last-of-type {
+        margin-left: 0;
+    }
+
+    .itemListContainer ul {
+        width: 100%;
+    }
+
+    .itemListContainer ul li {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .itemListContainer ul li {
+        flex-basis: 100%;
+    }
+}

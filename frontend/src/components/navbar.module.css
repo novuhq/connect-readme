@@ -75,6 +75,12 @@
     margin-bottom: 1em;
 }
 
+
+.activeNav {
+    color: rgb(28, 150, 109);
+    font-weight: 600;
+}
+
 @media (min-width:40rem) {
     .header {
         padding-inline: 2em;
