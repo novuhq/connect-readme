@@ -23,6 +23,8 @@ The ultimate service for managing multi-channel notifications with a single API.
 <h3>Description</h3>
 <p>Explain what you have build in the most detailed way</p>
 
+The problem this app aims to solve is the lack of a unified time tracking solution for remote teams. (I'm talking about you, ADP x Jira)
+
 
 <h3>Who are you?</h3>
 <p>Give us your best description who are you, and why you have decided to build this project</p>
