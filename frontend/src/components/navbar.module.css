@@ -75,13 +75,22 @@
     margin-bottom: 1em;
 }
 
-
 .activeNav {
     color: rgb(28, 150, 109);
     font-weight: 600;
 }
 
 @media (min-width:40rem) {
+    .link {
+        color: #fff;
+    }
+
+    .link:hover {
+        color: rgb(85, 250, 250);
+        transform: scale(1.1);
+        text-decoration: underline;
+    }
+
     .header {
         padding-inline: 2em;
     }

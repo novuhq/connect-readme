@@ -1,0 +1,93 @@
+.loginContainer {
+    background-image: url('/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #393838;
+}
+
+.formContainer {   
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm {
+    max-width: 500px;
+    width: 90%;
+    padding: 1em;
+    background-color: #e7e1e1;
+    border-radius: 5px;
+}
+
+.labelText,
+.loginBtn {
+    display: block;
+}
+
+.labelText {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+    color: #164636;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #38d29f;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #164636;
+    color: #fff;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    background-color: #209e74;
+    color: #fff;
+}
+
+.loginBtn:focus {
+    background-color: #1c966d;
+    color: #fff;
+}
+
+.center {
+    text-align: center;
+
+}
+
+.heading {
+    font-size: 1em;
+    line-height: 24px;
+    color: #30bc8e;
+}
+
+.subtext {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+    color: #164636;
+}
+
+.signupRedirect {
+    font-size: 0.8em;
+    color: #164636;
+}
+
+.signup {
+    color: #38d29f;
+}
