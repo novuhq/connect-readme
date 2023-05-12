@@ -58,25 +58,29 @@
     border: none;
 }
 
-.login {
-    background-color: transparent;
-    color: rgb(28, 150, 109)
-}
-
-.signIn {
+.signUp {
     background-color: rgb(28, 150, 109);
     color: white;
     padding: 0.5em 1em;
     border-radius: 0.5em;
     cursor: pointer;
+    font-weight: 600;
+}
+
+.signUp.activeNav {
+    background-color: #fff;
+    color: rgb(28, 150, 109);
 }
 
 .navLink {
     margin-bottom: 1em;
 }
-
-.activeNav {
+.link{
+    margin-bottom: 0.5em;
+}
+.link.activeNav {
     color: rgb(28, 150, 109);
+    text-decoration: underline;
     font-weight: 600;
 }
 
@@ -87,8 +91,6 @@
 
     .link:hover {
         color: rgb(85, 250, 250);
-        transform: scale(1.1);
-        text-decoration: underline;
     }
 
     .header {
@@ -125,9 +127,6 @@
     }
 
     .login {
-        background-color: rgb(248, 248, 248);
-        padding: 0.5em 1em;
-        border-radius: 0.5em;
         cursor: pointer;
     }
 }
