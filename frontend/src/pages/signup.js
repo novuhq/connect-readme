@@ -11,9 +11,16 @@ function SignUp() {
             Sign up to create an account
           </h2>
           <p className={`${styles.center} ${styles.subtext}`}>
-            {" "}
-            Please login to your account.
+            Kindly sign up to have access to all features
           </p>
+          <label className={styles.label}>
+            <span className={styles.labelText}>Username</span>
+            <input
+              type="text"
+              placeholder="Enter your username"
+              className={styles.input}
+            />
+          </label>
           <label className={styles.label}>
             <span className={styles.labelText}> Email</span>
             <input
@@ -36,7 +43,7 @@ function SignUp() {
           <p className={`${styles.center} ${styles.signupRedirect}`}>
             Already have an account?{" "}
             <Link href="/login" className={styles.signup}>
-              Login
+              Log in
             </Link>
           </p>
         </form>
