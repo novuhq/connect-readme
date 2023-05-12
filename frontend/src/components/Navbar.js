@@ -38,7 +38,7 @@ function Navbar() {
           <li className={styles.navLink}>
             <Link
               href="login"
-              className={`${styles.login} ${
+              className={`${styles.link} ${
                 router.pathname === "/login" ? styles.activeNav : null
               }`}
             >
@@ -46,10 +46,14 @@ function Navbar() {
             </Link>
           </li>
           <li className={styles.navLink}>
-            {" "}
-            <button className={`${styles.btn} ${styles.signIn}`}>
-              Sign in
-            </button>
+            <Link
+              href="signup"
+              className={`${styles.signUp} ${
+                router.pathname === "/signup" ? styles.activeNav : null
+              }`}
+            >
+            Sign up
+            </Link>
           </li>
         </ul>
       </nav>
