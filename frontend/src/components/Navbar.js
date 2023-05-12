@@ -14,25 +14,36 @@ function Navbar() {
  
   return (
     <header className={styles.header}>
-       <Link href="/">
+      <Link href="/">
         <div className={styles.logoContainer}>
           <Image src="/logo.png" width={30} height={30} alt="notification" />
           <h1 className={styles.white}>
             Stock<span className={styles.green}>alert</span>
           </h1>
         </div>
-       </Link>
+      </Link>
 
       <nav className={styles.nav} data-visible={isVisible}>
         <ul className={styles.navLinks}>
           <li className={styles.navLink}>
-            <Link href="market" className={router.pathname === "/market" ? styles.activeNav : null }>
-            Market
+            <Link
+              href="market"
+              className={`${styles.link} ${
+                router.pathname === "/market" ? styles.activeNav : null
+              }`}
+            >
+              Market
             </Link>
           </li>
           <li className={styles.navLink}>
-            {" "}
-            <button className={`${styles.btn} ${styles.login}`}>Login</button>
+            <Link
+              href="login"
+              className={`${styles.login} ${
+                router.pathname === "/login" ? styles.activeNav : null
+              }`}
+            >
+              Login
+            </Link>
           </li>
           <li className={styles.navLink}>
             {" "}
