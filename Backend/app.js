@@ -1,6 +1,7 @@
 const express = require('express');
-const { sequelize } = require('./src/sequelize/models');
 require('dotenv').config();
+const { sequelize } = require('./src/sequelize/models');
+const { User } = require("./src/sequelize/models");
 
 const app = express();
 const port = process.env.PORT;
