@@ -2,9 +2,12 @@ import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import styles from "../styles/Market.module.css";
 import { useState } from "react";
+import AddAlert from "@/components/AddAlert";
 
 const market = () => {
 const [isOpen, setIsOpen] = useState(false);
+const [addAlert, setAddAlert] = useState(false)
+const [current, setCurrent] = useState(undefined)
   const sampleList = [
     {
       name: "Bitcoin",
@@ -38,6 +41,11 @@ const [isOpen, setIsOpen] = useState(false);
     },
   ];
 
+  function handleAddAlertOpen (id) {
+    setCurrent(sampleList[id])
+    setAddAlert(true)
+  }
+
   return (
     <>
       <Head>
@@ -52,6 +60,10 @@ const [isOpen, setIsOpen] = useState(false);
       </Head>
       <div className={styles.marketContainer}>
         <div className={styles.navWrap}>
+            {
+                addAlert &&
+                <AddAlert market={current} setAddAlert={setAddAlert} />
+            }
           <Navbar />
         </div>
         <div className={styles.customSelect}>
@@ -71,10 +83,10 @@ const [isOpen, setIsOpen] = useState(false);
         <section className={styles.itemListContainer}>
           <ul>
             {sampleList.map((item, index) => (
-              <li key={index}>
+              <li key={index} onClick={()=> handleAddAlertOpen(index)}>
                 <div>
                   <div>
-                    <div></div>
+                    <div className={styles.itemImage}></div>
                     <div>
                       <h4>{item.symbol}</h4>
                       <p>{item.name}</p>
