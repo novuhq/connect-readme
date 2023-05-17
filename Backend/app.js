@@ -1,13 +1,15 @@
 const express = require("express");
 require("dotenv").config();
 const { sequelize } = require("./src/sequelize/models");
-const { User } = require("./src/sequelize/models");
+const authrouter = require("./src/auth/auth.route")
+const cookieParser = require("cookie-parser");
 
 const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 const connectDb = async () => {
   try {
@@ -28,14 +30,7 @@ app.get("/api/v1", (req, res) => {
   });
 });
 
-app.post("/api/v1/users", async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
-  const newUser = await User.create({ firstName, lastName, email, password });
-
-  // Create a new user
-  console.log(`${newUser.firstName} ID`, newUser.id);
-  res.json({ message: "success", newUser });
-});
+app.use("/api/v1/auth", authrouter);
 
 // Catching all Undefined Routes
 app.use("*", (req, res) => {
