@@ -1,0 +1,90 @@
+.alertBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(145, 145, 145, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alertContainer {
+    background-color: white;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;
+}
+
+.alertContainer > button:first-of-type {
+    position: absolute;
+    right: 5%;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.alertContainer h4 {
+    font-size: 1.2rem;
+    margin-block: 1rem;
+}
+
+.selectMarket {
+    height: 50px;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ebf5ea;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+    width: 100px;
+}
+
+.flexed, .preview li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectMarketContainer, .market, .value {
+    margin-bottom: 1rem;
+}
+
+
+.market > div {
+    display: flex;
+    align-items: center;
+}
+
+.market > div > p {
+    margin-left: 0.5rem;
+}
+
+.preview {
+    width: 95%;
+    margin-inline: auto;
+    background-color: rgb(231, 231, 231);
+    padding: 1rem 0.5rem;
+}
+
+.preview > p {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.preview li {
+    margin-block: 0.5rem;
+}
+
+
+.submit {
+    display: block;
+    width: 40%;
+    background-color: #072364;
+    color: white;
+    padding-block: 0.6rem;
+    margin-inline: auto;
+    margin-top:3rem;
+}

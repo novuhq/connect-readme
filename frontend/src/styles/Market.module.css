@@ -1,0 +1,87 @@
+.navWrap {
+    background-color: currentColor;
+}
+
+.marketContainer {
+    background-color: #efecec;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    ;
+}
+
+.selectMarket {
+    height: 50px;
+    margin: 3em 1em;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ebf5ea;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+    width: 100px;
+}
+
+.itemListContainer {
+    padding-bottom: 2em;
+}
+
+.itemListContainer ul {
+    display: grid;
+    gap: 1em;
+    padding-inline: 1em;
+}
+
+.itemListContainer ul li {
+    flex-basis: 32%;
+}
+
+.itemListContainer ul li>div {
+    border-radius: 10px;
+    background-color: rgb(255, 253, 253);
+    height: 200px;
+}
+
+.itemListContainer ul li>div>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-inline: 1.5rem;
+    align-items: center;
+}
+
+.itemImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #6DF84A;
+    background-color: #8E3737;
+}
+
+.itemListContainer ul li>div>div:first-child>div:last-child {
+    text-align: end;
+}
+
+.itemListContainer ul li>div>h2 {
+    margin-top: 2rem;
+    text-align: end;
+    margin-inline: 1.5rem;
+    font-size: 2rem;
+
+}
+
+@media (min-width:40rem) {
+    .itemListContainer ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:60rem) {
+    .itemListContainer ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .itemListContainer,.customSelect {
+        padding-inline: 2em;
+    }
+}

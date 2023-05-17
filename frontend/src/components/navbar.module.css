@@ -1,0 +1,132 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.white {
+    color: rgb(245, 245, 245);
+    font-size: 2em;
+}
+
+.green {
+    color: rgb(178, 242, 221);
+}
+
+.mobileNavigationBtn {
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/icon-hamburger.svg');
+}
+
+.mobileNavigationBtn[aria-expanded=true] {
+    background-image: url('../assets/icon-close.svg');
+}
+
+.nav {
+    display: none;
+}
+
+.nav[data-visible=true] {
+    display: block;
+    background-color: #fff !important;
+    position: fixed;
+    top: 4em;
+    left: 1em;
+    right: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    color: #000;
+    z-index: 1;
+}
+
+.navLinks {
+    text-align: center;
+    padding: 1em;
+}
+
+.btn {
+    border: none;
+}
+
+.signUp {
+    background-color: rgb(28, 150, 109);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.signUp.activeNav {
+    background-color: #fff;
+    color: rgb(28, 150, 109);
+}
+
+.navLink {
+    margin-bottom: 1em;
+}
+.link{
+    margin-bottom: 0.5em;
+}
+.link.activeNav {
+    color: rgb(28, 150, 109);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media (min-width:40rem) {
+    .link {
+        color: #fff;
+    }
+
+    .link:hover {
+        color: rgb(85, 250, 250);
+    }
+
+    .header {
+        padding-inline: 2em;
+    }
+
+    .mobileNavigationBtn {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav[data-visible=true] {
+        display: block;
+        background-color: transparent;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        padding: 0;
+        color: #fff;
+    }
+
+    .navLinks {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .navLink {
+        margin-bottom: 0;
+    }
+
+    .login {
+        cursor: pointer;
+    }
+}
